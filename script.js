@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bookingButtons = document.querySelectorAll(".booking-btn");
     const selectedSeatsDisplay = document.querySelector(".show-total");
-    const grandTotalDisplay = document.querySelector(".grand-total"); // Updated grand total display
+    const grandTotalDisplay = document.querySelector(".grand-total");
     const totalPriceDisplay = document.querySelector(".seatCount span");
     const showTotal = document.querySelector(".show-total");
-    const couponInput = document.querySelector("input[type='text']");
-    const applyCouponButton = document.querySelector("button.btn");
+    const couponInput = document.getElementById("input-text");
+    const applyCouponButton = document.getElementById("applyBtn");
 
     let selectedSeats = [];
     let couponApplied = false;
 
-    // Function to update the selected seats display and calculate grand total
     function updateSelectedSeatsDisplay() {
         selectedSeatsDisplay.innerHTML = "";
         let totalPrice = 0;
@@ -35,44 +34,42 @@ document.addEventListener("DOMContentLoaded", function () {
             totalPrice += seat.price;
         });
 
-        // Apply discount if coupon applied and there are 4 or more bookings
-        if (couponApplied && selectedSeats.length >= 4) {
-            const discount = totalPrice * 0.15; // 15% discount
-            totalPrice -= discount;
-        }
-
         const grandTotal = calculateGrandTotal(totalPrice);
 
-        totalPriceDisplay.textContent = formatPrice(totalPrice); // Format total price
-        grandTotalDisplay.textContent = formatPrice(grandTotal); // Format grand total
+        totalPriceDisplay.textContent = formatPrice(totalPrice);
+
+        if (selectedSeats.length > 0) {
+            grandTotalDisplay.textContent = formatPrice(grandTotal);
+            grandTotalDisplay.classList.add("flex", "justify-between", "items-center", "border-b-2", "border-dashed", "py-2");
+        } else {
+            grandTotalDisplay.textContent = ""; // Hide grand total if no seats selected
+            grandTotalDisplay.classList.remove("flex", "justify-between", "items-center", "border-b-2", "border-dashed", "py-2");
+        }
     }
 
-    // Function to calculate grand total
     function calculateGrandTotal(totalPrice) {
-        if (couponApplied && selectedSeats.length >= 4) {
+        if (couponApplied && selectedSeats.length >= 4 && couponInput.value.trim().toUpperCase() === "NEW15") {
             const discount = totalPrice * 0.15; // 15% discount
             return totalPrice - discount;
         } else {
-            return totalPrice;
+            return totalPrice; 
         }
     }
 
-    // Function to format price display
     function formatPrice(price) {
-        return "BDT " + price.toFixed(2); // Format price with BDT prefix and 2 decimal places
+        return "BDT " + price.toFixed(2);
     }
 
-    // Event listener for booking buttons
     bookingButtons.forEach(button => {
         button.addEventListener("click", function () {
             if (selectedSeats.length >= 4) {
                 alert("You can only book a maximum of 4 seats.");
                 return;
             }
-            
+
             const seatNumber = button.textContent.trim();
-            const seatClass = "Economic"; // Assuming all seats belong to this class
-            const seatPrice = 500; // Assuming seat price is fixed at 500
+            const seatClass = "Economic";
+            const seatPrice = 500;
 
             const seat = { number: seatNumber, class: seatClass, price: seatPrice };
 
@@ -80,20 +77,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
             updateSelectedSeatsDisplay();
 
-            // Show the total section
             showTotal.classList.add("show");
 
-            // Change background color to green
             button.style.backgroundColor = "#1dd100";
         });
     });
 
-    // Event listener for applying coupon
     applyCouponButton.addEventListener("click", function () {
         const couponCode = couponInput.value.trim();
-        if (couponCode.toUpperCase() === "NEW15") {
+        if (selectedSeats.length === 4 && couponCode.toUpperCase() === "NEW15") {
             couponApplied = true;
             updateSelectedSeatsDisplay();
+        } else {
+            alert("Coupon is applicable only when 4 seats are selected.");
         }
     });
 });
