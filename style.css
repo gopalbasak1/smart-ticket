@@ -1,6 +1,3 @@
-/* .best{
-    background: red;
-} */
 .coupon{
     width: 550px;
     height: 220px;
@@ -86,4 +83,49 @@
     background-image: radial-gradient(circle at 100% 50%, transparent 25px, #ffbf0f 26px);
     
 }
+
+/* display */
+
+.display{
+    width: 1170px;
+    height: 418px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    filter: drop-shadow(0 17px 1px rgba(0,0,0,0.5));
+    display: flex;
+    align-items: stretch;
+    
+    color: #000;
+}
+
+.display::before,
+.display::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+}
+
+.display::before{
+    left: 0;
+    background-image: radial-gradient(circle at 0 50%, transparent 25px, #fff 26px);
+}
+.display::after{
+    right: 0;
+    background-image: radial-gradient(circle at 100% 50%, transparent 25px, #fff 26px);
+}
+
+.center{
+    flex-grow: 1;
+    text-align: center;
+    border-right: 2px dashed rgb(29, 209, 0) ;
+}
+.right-display{
+    background-image: radial-gradient(circle at 100% 50%, transparent 25px, #fff 26px);
+    
+}
+
 
