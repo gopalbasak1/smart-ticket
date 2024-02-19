@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -64,67 +66,77 @@
     </section>
 
     <!-- Banner -->
-    <section class="w-[1173px] mx-auto my-10">
-        <div class="hero h-[550px] w-[1170px] mx-auto rounded-[32px]" style="background-image: url(images/banner.png);">
+    <section class="mx-4 md:mx-auto md:max-w-[768px] lg:max-w-[1173px] my-10">
+        <div class="hero h-[450px] md:h-[550px] lg:h-[600px] w-full md:w-[90%] lg:w-[1170px] mx-auto rounded-[32px]" style="background-image: url(images/banner.png);">
             <div class="hero-overlay bg-opacity-15 rounded-[32px]"></div>
             <div class="hero-content text-center text-neutral-content">
-              <div class="">
-                <h1 class="mb-5 text-6xl font-extrabold leading-[86px] w-[742px] mx-auto h-[172px]  text-[#fff]"> End-to-End Travel with <span class="text-[#1dd100]">AMD Paribahan</span></h1>
-                <p class="mb-5 w-[691px] h-[60px] mx-auto text-lg text-[#ebebeb]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                <button class="btn rounded-xl border-none w-[170px] h-[65px] bg-[#1dd100] text-xl font-bold">Buy Tickets</button>
-              </div>
-            </div>
-          </div>
-    </section>
-    
-
-    <!-- Best offer -->
-    <section class="">
-        <h2 class="text-4xl font-bold text-center mb-6">Best Offers for you</h2>
-        <div class="mb-10 flex w-[1173px] mx-auto">
-            <div class="coupon">
-                <div class="left inter w-[216px] mx-auto flex flex-col justify-center items-center ml-7">
-                    <h2 class="text-3xl font-bold">15% OFF</h2>
-                        <h3 class="text-sm font-medium">on your next purchase</h3>
-                        <p class="text-[#816310] text-sm">use by January 2024 </p>
-                </div>
-                <div class="center">
-                    <div>
-                       
-                    </div>
-                </div>
-                <div class="right raleway w-[216px] mx-auto flex flex-col justify-center items-center"">
-                    <h4 class="text-3xl font-bold">NEW15</h4>
-                    <p class="text-[#816310] text-sm">Coupon Code</p>
-                </div>
-            </div>
-    
-            <div class="couponRight">
-                <div class="leftcoupon bg-[#f78c9c] inter w-[216px] mx-auto flex flex-col justify-center items-center ml-7">
-                    <h2 class="text-3xl font-bold">20% OFF</h2>
-                        <h3 class="text-sm font-medium">on your next purchase</h3>
-                        <p class="text-[#816310] text-sm">use by January 2024 </p>
-                </div>
-                <div class="center">
-                    <div>
-                       
-                    </div>
-                </div>
-                <div class="rightcoupon raleway w-[216px] mx-auto flex flex-col justify-center items-center"">
-                    <h4 class="text-3xl font-bold">Couple 20</h4>
-                    <p class="text-[#816310] text-sm">Coupon Code</p>
+                <div class="px-4 md:px-0">
+                    <h1 class="mb-5 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[72px] md:leading-[86px] text-white raleway">End-to-End Travel with <br><span class="text-[#1dd100]">AMD Paribahan</span></h1>
+                    <p class="mb-5 text-base md:text-lg lg:text-xl text-[#ebebeb] inter">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+                    <a href="#ticketSection" class="btn rounded-xl border-none w-[150px] md:w-[170px] h-[55px] md:h-[65px] bg-[#1dd100] text-lg md:text-xl font-bold">Buy Tickets</a>
                 </div>
             </div>
         </div>
-
     </section>
+    
+    
+
+    <!-- Best offer -->
+        <section class="lg:w-[1170px] mx-auto my-10">
+            <div>
+                <h2 class="mb-10 text-center font-bold text-2xl raleway">Best Offers for you</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+
+                <div class="1 w-[420px] md:w-[550px] mx-auto h-[220px] flex bg-[#ffbf0f] rounded-3xl">
+                    <div class="w-[59%] flex flex-col  justify-center pl-14 inter">
+                        <h3 class="text-xl font-bold">15% OFF</h3>
+                        <p class="text-lg font-medium">on your next purchase</p>
+                        <p class="text-[#9a7510]">use by January 2024</p>
+                    </div>
+
+                    <div>
+                        <img class="h-[220px]" src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="w-[39%] flex flex-col items-center justify-center">
+                        <h4 class="text-xl font-bold raleway">New15</h4>
+                        <p class="text-[#9a7510]">Coupon Code</p>
+                    </div>
+                </div>
+
+                <div class="2 w-[420px] md:w-[550px] mx-auto h-[220px] flex bg-[#f78c9c] rounded-3xl">
+                    <div class="w-[59%] flex flex-col  justify-center pl-14 inter">
+                        <h3 class="text-xl font-bold">20% OFF</h3>
+                        <p class="text-lg font-medium">on your next purchase</p>
+                        <p class="text-[#9a7510]">use by January 2024</p>
+                    </div>
+
+                    <div>
+                        <img class="h-[220px]" src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="w-[39%] flex flex-col items-center justify-center">
+                        <h4 class="text-xl font-bold raleway">Couple 20</h4>
+                        <p class="text-[#9a7510]">Coupon Code</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="mt-10 w-[1170px] mx-auto text-center ">
+                <button class="btn text-xl font-semibold border-[#56dd40] text-[#56dd40] bg-[#fff] raleway">See All Offers</button>
+            </div>
+
+        </section>
+    
 
     <!-- ticket collection -->
-    <section class="my-10 w-[1440px] rounded-t-[88px] rounded-b-[88px] h-[2208px] mx-auto bg-[#d4d6d7]">
+    <section id="ticketSection"  class="my-36 w-[1440px] rounded-t-[88px] rounded-b-[88px] h-[2208px] mx-auto bg-[#d4d6d7]">
 
-        <div class="title text-center">
-            <h3 class="text-[40px] font-bold">AMD Paribahan</h3>
-            <p class="text-lg w-[736px] mx-auto text-[#8a8c91]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+        <div class="title text-center py-36">
+            <h3 class="text-[40px] font-bold raleway">AMD Paribahan</h3>
+            <p class="text-lg w-[736px] mx-auto text-[#8a8c91] inter">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
         </div>
 
         <div class="card-display">
@@ -136,15 +148,16 @@
                         <div class="leftdisplay flex justify-evenly items-center gap-5">
                             <img class="w-[69px] h-[48px] mx-auto" src="images/bus-logo.png" alt="">
                             <div>
-                                <h2 class="text-3xl font-bold pb-2">Greenline Paribahan</h2>
-                                <p class="text-lg text-[#919297]">Coach-009-WEB ! AC_Business</p>
+                                <h2 class="text-3xl font-bold pb-2 raleway">Greenline Paribahan</h2>
+                                <p class="text-lg text-[#919297] inter">Coach-009-WEB ! AC_Business</p>
                             </div>
                         </div> 
 
                         <div class="rightdisplay h-[56px] flex justify-evenly items-center gap-2 border-[#37d61e] -border-2 px-3 bg-[#ddf8d9] rounded-xl">
                             <img class="w-[21px] h-[21px]" src="images/seat-green.png" alt="">
-                            <p class="text-lg font-medium text-[#37d61e]">40</p>
-                            <p class="text-[#37d61e]">Seats left</p>
+                            <p id="seatTotal" class="text-lg font-medium text-[#37d61e] inter">40</p>
+                            <p class="text-[#37d61e] inter">Seats left</p>
+
                         </div>  
 
                     </div>
@@ -152,7 +165,7 @@
                     <div class="route-plan mt-6 w-[808px] h-[280px] mx-auto bg-[#f7f8f8] rounded-2xl">
 
                         <div class="route w-[790px] mx-auto flex justify-between border-b-2 border-dashed p-8">
-                            <h3 class="text-lg font-semibold text-[#898c91]">Route</h3>
+                            <h3 class="text-lg font-semibold text-[#898c91] raleway">Route</h3>
                             <div></div>
                             <div></div>
                             <div></div>
@@ -183,13 +196,13 @@
                             <div></div>
                             <div></div>
                             <div>
-                                <h4 class="text-lg font-semibold">Dhaka - Sylhet</h4>
+                                <h4 class="text-lg font-semibold raleway">Dhaka - Sylhet</h4>
                             </div>
                             <p></p>
                         </div>
 
                         <div class="route w-[790px] mx-auto flex justify-between border-b-2 border-dashed p-8">
-                            <h3 class="text-lg font-semibold text-[#898c91]">Departure Time</h3>
+                            <h3 class="text-lg font-semibold text-[#898c91] raleway">Departure Time</h3>
                             <div></div>
                             <div></div>
                             <div></div>
@@ -220,20 +233,20 @@
                             <div></div>
                             <div></div>
                             <div>
-                                <h4 class="text-lg font-semibold">9:00 PM</h4>
+                                <h4 class="text-lg font-semibold raleway">9:00 PM</h4>
                             </div>
                             <p></p>
                         </div>
 
                         <div class="route w-[800px] mx-auto flex justify-around py-6">
                             <div class="px-3 py-2 mx-auto border-[#eaeaed] rounded-xl bg-[#eaebec] border-2">
-                                <p class="text-lg font-medium text-[#31353e]">Boarding Point - Laxmipur</p>
+                                <p class="text-lg font-medium text-[#31353e] inter">Boarding Point - Laxmipur</p>
                             </div>
                             <div class="px-3 py-2 mx-auto border-[#eaeaed] rounded-xl bg-[#eaebec] border-2">
-                                <p class="text-lg font-medium text-[#31353e]">Boarding Point - Laxmipur</p>
+                                <p class="text-lg font-medium text-[#31353e] inter">Boarding Point - Laxmipur</p>
                             </div>
                             <div class="px-3 py-2 mx-auto border-[#eaeaed] rounded-xl bg-[#eaebec] border-2">
-                                <p class="text-lg font-medium text-[#31353e]">Boarding Point - Laxmipur</p>
+                                <p class="text-lg font-medium text-[#31353e] inter">Boarding Point - Laxmipur</p>
                             </div>
 
                             
@@ -252,27 +265,29 @@
                 </div>
                 <div class="right-display raleway w-[300px] mx-auto flex flex-col justify-center items-center">
                     <img src="images/fare.png" alt="">
-                    <h4 class="text-3xl font-bold mt-5"><span>550</span> Taka</h4>
-                    <p class="text-[#816310] text-sm">Per Seat</p>
+                    <h4 class="text-3xl font-bold mt-5 raleway"><span>550</span> Taka</h4>
+                    <p class="text-[#816310] text-sm raleway">Per Seat</p>
                 </div>
             </div>
         </div>
+
+        
 
         <div class="selectSeat w-[1170px] h-[1056px] mx-auto flex justify-between mt-10 p-8 bg-[#ffffff]">
 
             <div class="leftSeat w-[58%]">
 
-                <h2 class="text-2xl font-semibold py-4">Select Your Seat</h2>
+                <h2 class="text-2xl font-semibold py-4 raleway">Select Your Seat</h2>
 
                 <div class="flex justify-between border-t-2 border-b-2 border-dashed">
 
                     <div class="flex gap-2 items-center py-2">
                         <img class="w-[22px] h-[22px]" src="images/seat-gray.png" alt="">
-                        <p class="text-[#a0a2a6] text-lg font-medium">Available</p>
+                        <p class="text-[#a0a2a6] text-lg font-medium inter">Available</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <img class="w-[22px] h-[22px]"  src="images/seat-green-filled.png" alt="">
-                        <p class="text-[#1dd100] text-lg font-medium">Selected</p>
+                        <p class="text-[#1dd100] text-lg font-medium inter">Selected</p>
                     </div>
                 </div>
 
@@ -284,7 +299,7 @@
 
                 <div class="seat flex justify-between items-center gap-5 ml-2">
 
-                    <div class="font w-[10%] flex flex-col space-y-12">
+                    <div class="font w-[10%] flex flex-col space-y-12 inter">
                         <p>A</p>
                         <p>B</p>
                         <p>C</p>
@@ -298,7 +313,7 @@
                     </div>
       
 
-                    <div class="leftFont w-[43%] flex flex-col gap-4 -ml-5">
+                    <div class="leftFont w-[43%] flex flex-col gap-4 -ml-5 inter">
 
                         <div class="flex justify-between">
                             <button class="bg-[#f7f8f8] w-[110px] h-[56px] rounded-lg btn mr-8 booking-btn">A1</button>
@@ -343,7 +358,7 @@
                         
                     </div>
 
-                    <div class="rightFont w-[43%] flex flex-col gap-4 pl-8">
+                    <div class="rightFont w-[43%] flex flex-col gap-4 pl-8 inter">
 
                         <div class=" flex justify-between">
                             <button class="bg-[#f7f8f8] w-[110px] h-[56px] rounded-lg btn mr-8 booking-btn">A3</button>
@@ -395,23 +410,23 @@
             <div class="border-2 border-dashed"></div>
 
             <div class="rightSelected w-[38%] ">
-                <h2 class="text-2xl font-semibold py-4 border-b-2 border-dashed">Select Your Seat</h2>
+                <h2 class="text-2xl font-semibold py-4 border-b-2 border-dashed raleway">Select Your Seat</h2>
 
                 <div class="seatCount my-5">
 
-                    <div class="seat-booking w-[433px] h-[500px] mx-auto bg-[#f7f8f8] rounded-xl">
+                    <div class="seat-booking w-[433px] h-[490px] mx-auto bg-[#f7f8f8] rounded-xl">
 
-                        <div class="w-[370px] mx-auto flex justify-between items-center pt-5 pb-2 border-b-2 border-dashed text-lg font-medium">
+                        <div class="w-[370px] mx-auto flex justify-between items-center pt-5 pb-2 border-b-2 border-dashed text-lg font-medium inter">
                             <p>Seat</p>
                             <p>Class</p>
                            <p>Price</p>
                         </div>
 
-                        <div class="show-total">
+                        <div class="show-total inter">
 
                         </div>
 
-                        <div class="w-[370px] mx-auto flex justify-between items-center border-t-2 mt-8 text-lg font-medium pt-2">
+                        <div class="w-[370px] mx-auto flex justify-between items-center border-t-2 mt-8 text-lg font-medium pt-2 inter">
                             <p>Total Price</p>
                             <div class="flex gap-3">
                                 <p class="pl-3"></p>
@@ -420,21 +435,49 @@
                             
                         </div>
 
-                        <div class="flex mt-5">
+                        <div class="flex mt-5 inter">
                             <input id="input-text" class="w-[370px] mx-auto h-[56px] rounded-l-xl pl-4 text-sm text-[#9a9ca0] ml-10" type="text" placeholder="Have any coupon?">
                             <button id="applyBtn" class="btn font-lg font-semibold h-[56px] text-[#fff] bg-[#1dd100] mr-5 ">Apply</button>
                         </div>
 
-                        <div class="grand-total">
-
+                        <div class="w-[370px] mx-auto flex justify-between items-center border-t-2 mt-8 text-lg font-medium pt-2" >
+                            <p>Grand Total</p>
+                            <div class="flex gap-3">
+                                <p class="pl-3"></p>
+                                <span class="grand-total">0</span>
                         </div>
 
                     </div>
 
-                    <div class="next w-[433px] h-[335px] mx-auto my-10">
-                        <button class="btn w-full bg-[#1dd100] text-[#fff] text-[20px] font-extrabold">Next</button>
-                    </div>
+                    
+                    
+                    
+                    
 
+                </div>
+
+                <div class="py-10">
+                    <input class="w-full h-[64px] border-2 rounded-lg pl-3" type="number" name="" id="numberInput" placeholder=" Enter your phone number ">
+                </div>
+
+                <!-- model -->
+                <div class="next w-[433px] h-[335px] mx-auto my-10">
+                    <!-- The button to open modal -->
+                    <label for="my_modal_6" class="btn w-full bg-[#1dd100] text-[#fff] text-[20px] font-extrabold raleway">Next</label>
+                
+                    <!-- Put this part before </body> tag -->
+                    <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+                    <div class="modal" role="dialog">
+                        <div class="modal-box w-[900px] mx-auto"> <!-- Set width to 750px using w-96 -->
+                            <img class="w-[68px] h-[51px] mx-auto" src="images/success.png" alt="">
+                            <h3 class="py-5 text-2xl font-bold text-center text-[#1dd100] ">SUCCESS</h3>
+                            <p class=" pt-5 pb-3 w-[450px] mx-auto  text-xl font-semibold">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.</p>
+                            <p class="text-[#c4c4c4] text-xl py-5"> Shortly you will find a confirmation in your email.</p>
+                            <div class="modal-action">
+                                <label for="my_modal_6" class="btn w-3/5 mx-auto bg-[#1dd100] text-[#fff]">Continue</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div>

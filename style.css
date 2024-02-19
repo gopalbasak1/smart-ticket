@@ -1,5 +1,5 @@
 .coupon{
-    width: 550px;
+    
     height: 220px;
     border-radius: 10px;
     overflow: hidden;
@@ -41,8 +41,17 @@
     
 }
 
+/* @media screen and(min-width: 425px) {
+    .coupon{
+        width: 420px;
+        display: grid;
+        grid-column: 1;
+    }
+} */
+
+
 .couponRight{
-    width: 550px;
+   
     height: 220px;
     border-radius: 10px;
     overflow: hidden;
